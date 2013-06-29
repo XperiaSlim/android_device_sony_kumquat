@@ -24,7 +24,14 @@
  
 # Torch
 PRODUCT_PACKAGES := \
-    Torch
+    Torch \
+    Stk
+
+# Inherit common Phone stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+
+# Release name
+PRODUCT_RELEASE_NAME := kumquat
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -36,7 +43,7 @@ $(call inherit-product, device/sony/montblanc-common/prebuilt/resources-480x854.
 $(call inherit-product, device/sony/kumquat/kumquat.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_kumquat
+PRODUCT_NAME := cm_kumquat
 PRODUCT_DEVICE := kumquat
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
