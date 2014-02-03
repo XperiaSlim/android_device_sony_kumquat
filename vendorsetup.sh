@@ -1,2 +1,2 @@
-add_lunch_combo slim_kumquat-eng
 add_lunch_combo slim_kumquat-userdebug
+add_lunch_combo slim_kumquat-eng
