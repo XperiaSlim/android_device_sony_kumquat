@@ -24,21 +24,27 @@
  
 # Torch
 PRODUCT_PACKAGES := \
-    Torch
+    Torch \
+    Stk
+
+# Inherit common Phone stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+
+# Release name
+PRODUCT_RELEASE_NAME := kumquat
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 #charging animation
-$(call inherit-product, device/sony/kumquat/prebuilt/resources-480x854.mk)
+$(call inherit-product, device/sony/montblanc-common/prebuilt/resources-480x854.mk)
 
 # Inherit from kumquat device
 $(call inherit-product, device/sony/kumquat/kumquat.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_kumquat
+PRODUCT_NAME := cm_kumquat
 PRODUCT_DEVICE := kumquat
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Xperia U
+PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-#PRODUCT_RESTRICT_VENDOR_FILES := owner path
+PRODUCT_MODEL := Xperia U
