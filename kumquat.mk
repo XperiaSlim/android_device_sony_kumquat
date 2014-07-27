@@ -106,5 +106,4 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/sony/kumquat/kumquat-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.low_ram=true \
     ro.sf.lcd_density=240
